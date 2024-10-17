@@ -1,13 +1,6 @@
 # Projeto-Integrador-SPCGrafeno-BD
 Repository dedicated to versioning the Database from the SPC Grafeno project with Quarks Team
 
-### Additional Information:
-- **Primary Key**: `result_id` is the primary key and uniquely identifies each result.
-- **Constraints**: The `final_score` column is constrained to ensure the score is between 1 and 1000.
-- **Default Values**: 
-  - `record_status` defaults to `'active'`.
-  - `created_timestamp` defaults to the current timestamp (`CURRENT_TIMESTAMP`).### Table: `ai_score_results`
-
 This table stores the AI-generated score results, along with relevant metadata and input data. Below is the detailed description of each column.
 
 | Column Name        | Data Type     | Description                                                                 |
