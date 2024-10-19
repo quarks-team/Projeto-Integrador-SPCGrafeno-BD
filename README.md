@@ -106,7 +106,6 @@ This document provides the detailed data dictionary for the `ai_score_results` t
 | Column Name        | Data Type   | Description                                                                                     |
 |--------------------|-------------|-------------------------------------------------------------------------------------------------|
 | `result_id`        | UUID        | Unique identifier for each result. Automatically generated using `gen_random_uuid()`.            |
-| `entry_date`       | DATE        | The date when the input data was processed by the AI model.                                      |
 | `final_score`      | INTEGER     | The final calculated score for the endorser. This value represents the outcome of the scoring process. |
 | `input_variables`  | JSONB       | A JSONB object storing the input variables used in the score calculation for the endorser.       |
 | `endorser_name`    | VARCHAR(255)| The name of the endorser whose score is being calculated.                                       |
@@ -115,8 +114,6 @@ This document provides the detailed data dictionary for the `ai_score_results` t
 ### Column Details:
 
 - **`result_id`**: This is a unique identifier for each entry in the table, generated automatically using the `gen_random_uuid()` function. It ensures that each result can be uniquely referenced.
-  
-- **`entry_date`**: Represents the date when the input variables were processed and the score was calculated. This field is required and helps track when the data was handled.
 
 - **`final_score`**: The final score given to the endorser based on the input variables. The score is an integer value and reflects the endorser's overall rating or performance.
 
