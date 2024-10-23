@@ -16,7 +16,7 @@ CREATE TABLE "policy" (
     id SERIAL PRIMARY KEY,                             -- Auto-incremented integer ID
     name VARCHAR(255) NOT NULL,                        -- Policy name
     description TEXT,                                  -- Policy description
-    version INT NOT NULL,                              -- Version of the policy
+    version FLOAT NOT NULL,                              -- Version of the policy
     is_active BOOLEAN DEFAULT TRUE,                    -- Soft delete: whether the policy is active
     created_at TIMESTAMP DEFAULT NOW(),                -- Timestamp when the policy was created
     updated_at TIMESTAMP DEFAULT NOW(),                -- Timestamp when the policy was last updated
