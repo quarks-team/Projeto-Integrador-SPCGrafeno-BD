@@ -30,8 +30,9 @@ CREATE TABLE "user_policy" (
     policy_id INT REFERENCES "policy"(id),             -- Foreign key to policies (no ON DELETE CASCADE)
     is_active BOOLEAN DEFAULT FALSE,                   -- Whether the policy is still active for the user
     acceptance_date TIMESTAMP DEFAULT NOW(),           -- Timestamp of when the user accepted the policy
-    updated_at TIMESTAMP DEFAULT NOW()                 -- Last updated timestamp
-);
+    updated_at TIMESTAMP DEFAULT NOW(),                 -- Last updated timestamp
+    is_mandatory BOOLEAN DEFAULT FALSE                 -- Whether the policy is mandatory for the user
+    );
 
 -- Table for logging changes to policy acceptance
 -- No rows can be deleted; this ensures auditability for legal compliance
